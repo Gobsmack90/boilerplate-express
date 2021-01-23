@@ -4,7 +4,7 @@ var app = express();
      res.sendFile(__dirname + '/views/index.html')
  });
 
- app.use('/',expess.static(__dirname + '/public'));
+ app.use('/',express.static(__dirname + '/public'));
 
 
 
