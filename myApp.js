@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-    process.env.MESSAGE_STYLE=uppercase;
+    process.env.MESSAGE_STYLE="uppercase";
 
     app.get('/',function(req,res) {
         res.sendFile(__dirname + '/views/index.html')
