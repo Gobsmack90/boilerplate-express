@@ -1,4 +1,5 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
     process.env.MESSAGE_STYLE="uppercase";
 
@@ -13,6 +14,7 @@ var app = express();
     });
 
     app.use('/',express.static(__dirname + '/public'));
+    app.use(bodyParser.urlencoded({extended: false}));
 
     app.get('/json', function(req, res) {
         let message = "Hello json";
