@@ -33,7 +33,11 @@ var app = express();
         res.send({time: req.time})
     })
     
-
+    //echo server mounted at route GET /:word/echo.
+    app.get('/:word/echo', (req, res) => {
+        let word = req.params.word;
+        res.json({echo: word})
+    })
 
 
 
