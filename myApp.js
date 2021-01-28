@@ -25,6 +25,13 @@ var app = express();
         
     });
 
+    //chain a middleware function to add current time to the request object. then send that as a JSON object.
+    app.get('/now', (req, res, next) => {
+        req.time = new Date().toString();
+        next();
+    }, (req, res, next) => {
+        res.send({time: req.time})
+    })
     
 
 
