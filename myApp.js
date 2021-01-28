@@ -39,7 +39,12 @@ var app = express();
         res.json({echo: word})
     })
 
+    //api endpoint
+    app.get('/name', (req, res) => {
 
+        let { first: firstname, last: lastname } = req.query;
+        res.json({name: firstname + ' ' + lastname})
+    })
 
 
 
